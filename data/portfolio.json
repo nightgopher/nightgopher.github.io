@@ -11,7 +11,7 @@
       "problem": "让个人 Agent 能力长在自己的工具链上，而不是托管在某家产品里。",
       "contribution": "Go 实现的 Agent 运行时：会话压缩、工具与技能体系，CLI、桌面与移动端三端入口，SDK 与应用分层，发布后由自动更新器保持最新。",
       "proof": "查看 EasyAgent 源码",
-      "proof_url": "https://github.com/hwj123hwj/easyagent"
+      "proof_url": "https://github.com/nightgopher/easyagent"
     },
     "litellm-gateway": {
       "kind": "tool",
@@ -19,7 +19,7 @@
       "problem": "多个模型供应商、多个入口端，认证、路由与审计不能各自为政。",
       "contribution": "统一 OpenAI 兼容入口：多模型路由与 fallback、请求归档与可观测；迷你主机 systemd 常驻，自动构建健康才切换、失败自动回滚。",
       "proof": "查看网关源码",
-      "proof_url": "https://github.com/hwj123hwj/litellm-gateway"
+      "proof_url": "https://github.com/nightgopher/litellm-gateway"
     },
     "go-learning-for-java-dev": {
       "kind": "learning",
@@ -27,7 +27,7 @@
       "problem": "帮助 Java 开发者把熟悉的后端经验迁移到 Go。",
       "contribution": "组织九阶段课程、练习与答案，用并发和迷你 LLM 网关串起语法、工程习惯与实战。",
       "proof": "打开交互学习实验室",
-      "proof_url": "https://hwj123hwj.github.io/go-learning-for-java-dev/"
+      "proof_url": "https://nightgopher.github.io/go-learning-for-java-dev/"
     },
     "kaoyan-math-lab": {
       "kind": "learning"

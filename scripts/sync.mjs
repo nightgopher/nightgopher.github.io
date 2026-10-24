@@ -7,9 +7,9 @@ const root = new URL("..", import.meta.url).pathname;
 const statusPath = join(root, "data/status.json");
 const status = JSON.parse(readFileSync(statusPath, "utf8"));
 
-const GITHUB_USERNAME = "hwj123hwj";
+const GITHUB_USERNAME = "nightgopher";
 const headers = {
-  "User-Agent": "hwj123hwj-status-sync",
+  "User-Agent": "nightgopher-status-sync",
   Accept: "application/vnd.github.v3+json",
 };
 
@@ -60,7 +60,7 @@ async function sync() {
   }
 
   // Public discovery is informational; portfolio inclusion is an editorial choice.
-  const ignoredRepos = new Set(["hwj123hwj.github.io", "wx_key"]);
+  const ignoredRepos = new Set(["nightgopher.github.io", "wx_key"]);
   for (const repo of repos) {
     if (!ignoredRepos.has(repo.name.toLowerCase()) && !existingProjectIds.has(repo.name.toLowerCase())) {
       console.log(`Not listed: ${repo.name} (add to status.json after review)`);

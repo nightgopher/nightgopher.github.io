@@ -100,7 +100,7 @@ async function loadStatus() {
   renderProjects(infra, '#project-grid', portfolio?.projects);
   renderPullRequests(initiative.public_pull_requests || []);
   if (portfolio) renderFeatured(projects, portfolio);
-  else $('#featured-list').replaceChildren(link('代表作信息暂不可用，浏览全部源码 ↗', 'https://github.com/hwj123hwj'));
+  else $('#featured-list').replaceChildren(link('代表作信息暂不可用，浏览全部源码 ↗', 'https://github.com/nightgopher'));
   let filter = 'all';
   const renderCatalog = () => {
     const query = $('#project-search').value.trim().toLocaleLowerCase();
@@ -130,7 +130,7 @@ loadStatus().catch((error) => {
   for (const selector of ['#featured-list', '#project-grid', '#portfolio-grid', '#pr-list']) {
     const tag = selector === '#pr-list' ? 'li' : 'p';
     const message = element(tag, 'loading');
-    message.append(link('暂时无法载入，浏览 GitHub 项目 ↗', 'https://github.com/hwj123hwj'));
+    message.append(link('暂时无法载入，浏览 GitHub 项目 ↗', 'https://github.com/nightgopher'));
     $(selector).replaceChildren(message);
   }
   $('#project-search').disabled = true;
