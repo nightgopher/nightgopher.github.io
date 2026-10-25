@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-25",
   "initiative": {
     "id": "agent-infra",
     "title": "个人 Agent 基础设施",
@@ -35,9 +35,9 @@
       "visibility": "public",
       "category": null,
       "repository_url": "https://github.com/nightgopher/easyagent",
-      "stars": 4,
+      "stars": 1,
       "language": "Go",
-      "last_pushed_at": "2026-10-11"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "litellm-gateway",
@@ -47,9 +47,9 @@
       "visibility": "public",
       "category": null,
       "repository_url": "https://github.com/nightgopher/litellm-gateway",
-      "stars": 1,
+      "stars": 0,
       "language": "Go",
-      "last_pushed_at": "2026-10-11"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "agent-lessons",
@@ -70,7 +70,7 @@
       "repository_url": "https://github.com/nightgopher/kaoyan-math-lab",
       "stars": 0,
       "language": "Astro",
-      "last_pushed_at": "2026-10-11"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "custom-skills",
@@ -80,9 +80,9 @@
       "visibility": "public",
       "category": "portfolio",
       "repository_url": "https://github.com/nightgopher/custom-skills",
-      "stars": 4,
+      "stars": 0,
       "language": "JavaScript",
-      "last_pushed_at": "2026-09-30"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "rust-smart-pot",
@@ -94,7 +94,7 @@
       "repository_url": "https://github.com/nightgopher/rust-smart-pot",
       "stars": 0,
       "language": null,
-      "last_pushed_at": "2026-08-01"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "pi-extensions",
@@ -106,7 +106,7 @@
       "repository_url": "https://github.com/nightgopher/pi-extensions",
       "stars": 0,
       "language": "TypeScript",
-      "last_pushed_at": "2026-09-25"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "WePilot",
@@ -116,9 +116,9 @@
       "visibility": "public",
       "category": "portfolio",
       "repository_url": "https://github.com/nightgopher/WePilot",
-      "stars": 2,
+      "stars": 0,
       "language": "Python",
-      "last_pushed_at": "2026-06-26"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "go-learning-for-java-dev",
@@ -130,7 +130,7 @@
       "repository_url": "https://github.com/nightgopher/go-learning-for-java-dev",
       "stars": 0,
       "language": "Go",
-      "last_pushed_at": "2026-10-12"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "palmier-pro",
@@ -142,7 +142,7 @@
       "repository_url": "https://github.com/nightgopher/palmier-pro",
       "stars": 0,
       "language": "Swift",
-      "last_pushed_at": "2026-09-01"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "k8s-learn",
@@ -154,7 +154,7 @@
       "repository_url": "https://github.com/nightgopher/k8s-learn",
       "stars": 0,
       "language": "JavaScript",
-      "last_pushed_at": "2026-08-18"
+      "last_pushed_at": "2026-10-24"
     },
     {
       "id": "easycode-skills",
