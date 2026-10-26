@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25",
+  "generated_at": "2026-10-26",
   "initiative": {
     "id": "agent-infra",
     "title": "个人 Agent 基础设施",
@@ -35,9 +35,9 @@
       "visibility": "public",
       "category": null,
       "repository_url": "https://github.com/nightgopher/easyagent",
-      "stars": 1,
+      "stars": 3,
       "language": "Go",
-      "last_pushed_at": "2026-10-24"
+      "last_pushed_at": "2026-10-26"
     },
     {
       "id": "litellm-gateway",
@@ -130,7 +130,7 @@
       "repository_url": "https://github.com/nightgopher/go-learning-for-java-dev",
       "stars": 0,
       "language": "Go",
-      "last_pushed_at": "2026-10-24"
+      "last_pushed_at": "2026-10-25"
     },
     {
       "id": "palmier-pro",
