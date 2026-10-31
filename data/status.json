@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30",
+  "generated_at": "2026-10-31",
   "initiative": {
     "id": "agent-infra",
     "title": "个人 Agent 基础设施",
@@ -37,7 +37,7 @@
       "repository_url": "https://github.com/nightgopher/easyagent",
       "stars": 3,
       "language": "Go",
-      "last_pushed_at": "2026-10-30"
+      "last_pushed_at": "2026-10-31"
     },
     {
       "id": "litellm-gateway",
