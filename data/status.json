@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13",
+  "generated_at": "2026-11-14",
   "initiative": {
     "id": "agent-infra",
     "title": "个人 Agent 基础设施",
@@ -35,7 +35,7 @@
       "visibility": "public",
       "category": null,
       "repository_url": "https://github.com/nightgopher/easyagent",
-      "stars": 3,
+      "stars": 4,
       "language": "Go",
       "last_pushed_at": "2026-11-13"
     },
