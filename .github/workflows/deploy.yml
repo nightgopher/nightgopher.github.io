@@ -1,0 +1,70 @@
+name: deploy-site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # UTC 21:30 = 北京时间 05:30，每日重建技能广场数据
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main site
+        uses: actions/checkout@v4
+
+      - name: Checkout skills hub source
+        uses: actions/checkout@v4
+        with:
+          repository: nightgopher/custom-skills
+          path: skills-hub-src
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build skills hub (base=/skills)
+        working-directory: skills-hub-src/web
+        run: |
+          npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+          npm run build
+
+      - name: Build main site
+        run: |
+          npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+          npm run build
+
+      - name: Assemble artifact
+        run: |
+          mkdir -p out/skills
+          cp -r dist/. out/
+          cp -r data out/data
+          cp -r skills-hub-src/web/dist/. out/skills/
+          touch out/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

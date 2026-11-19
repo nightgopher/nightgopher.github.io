@@ -1,0 +1,17 @@
+{
+  "name": "nightgopher-github-io",
+  "type": "module",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Hwj 个人站：项目与实践 + 技能广场（/skills/ 由 custom-skills 仓库合并构建）",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.13.0"
+  }
+}

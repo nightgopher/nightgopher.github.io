@@ -2,7 +2,7 @@
 
 > 🌐 **线上访问：<https://nightgopher.github.io/>**
 >
-> 由 GitHub Pages 托管，`main` 分支推送后自动部署。
+> 由 GitHub Pages（Actions workflow）托管：`main` 推送、每日定时（北京时间 05:30）或手动触发合并构建部署——Astro 主站 + [custom-skills](https://github.com/nightgopher/custom-skills) 技能广场（`/skills/`）。
 
 `nightgopher.github.io` 是个人项目展示入口，同时保留跨项目基础设施的公开状态页：展示代表作、个人贡献、分类目录和经过脱敏的发布进度。
 
