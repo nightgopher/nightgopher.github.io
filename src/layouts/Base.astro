@@ -65,6 +65,10 @@ const structuredData = {
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles/global.css" />
+
+    <!-- Cloudflare Web Analytics -->
+    <script is:inline type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "92f4a74b3b2b43d4af56b82fd6139fab"}'></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
   <body>
     <slot />
