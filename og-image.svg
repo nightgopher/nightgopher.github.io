@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1412"/>
+      <stop offset="1" stop-color="#122720"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1090" cy="70" r="230" fill="#1e3d33" opacity="0.4"/>
+  <circle cx="90" cy="600" r="190" fill="#1e3d33" opacity="0.35"/>
+  <g>
+    <rect x="76" y="78" width="68" height="68" rx="18" fill="#4fd1a5"/>
+    <text x="110" y="124" font-size="38" font-weight="700" fill="#0b1412" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, sans-serif">H</text>
+  </g>
+  <text x="76" y="300" font-size="62" font-weight="700" fill="#e4eee9" font-family="PingFang SC, Hiragino Sans GB, sans-serif">把开发中的问题，</text>
+  <text x="76" y="392" font-size="62" font-weight="700" fill="#4fd1a5" font-family="PingFang SC, Hiragino Sans GB, sans-serif">做成可复用的工具。</text>
+  <text x="76" y="478" font-size="28" fill="#9fb5ab" font-family="PingFang SC, Hiragino Sans GB, sans-serif">个人 Agent 基础设施 · AI 编程协作 · 教学实践</text>
+  <text x="76" y="566" font-size="22" fill="#5f7a72" font-family="PingFang SC, Hiragino Sans GB, sans-serif">nightgopher.github.io</text>
+</svg>

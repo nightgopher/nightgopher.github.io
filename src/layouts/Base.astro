@@ -7,6 +7,33 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const siteName = 'Hwj · 项目与实践';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og-image.png', Astro.site);
+
+// 结构化数据：WebSite + Person，声明站点主体与 GitHub 身份关联。
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${Astro.site}#website`,
+      url: String(Astro.site),
+      name: siteName,
+      inLanguage: 'zh-CN',
+      description,
+      publisher: { '@id': `${Astro.site}#person` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${Astro.site}#person`,
+      name: 'Hwj',
+      url: String(Astro.site),
+      sameAs: ['https://github.com/nightgopher'],
+      knowsAbout: ['Agent 基础设施', 'LLM 网关', 'AI 编程协作', 'Go'],
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -14,12 +41,28 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#0b1412" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="zh_CN" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <title>{title}</title>
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
