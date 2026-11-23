@@ -1,127 +1,35 @@
 ---
-import Base from '../layouts/Base.astro';
-
-// 极简主页：两个可安装的核心项目即全部身份表达；
-// 技能广场等功能性板块已并入 Easy Suite 官网，这里只留入口。
-const products = [
-  {
-    name: 'EasyAgent',
-    desc: 'Go 实现的个人 Agent 运行时：会话压缩、工具与技能体系，CLI、桌面与移动端三端入口，SDK 与应用分层，发布后由自动更新器保持最新。',
-    url: 'https://github.com/nightgopher/easyagent',
-    badge: '值守运行中',
-    lang: 'Go',
-  },
-  {
-    name: 'EasyGateway',
-    desc: '统一 OpenAI 兼容入口：多模型路由与 fallback、请求归档与可观测；迷你主机 systemd 常驻，自动构建健康才切换、失败自动回滚。',
-    url: 'https://github.com/nightgopher/easygateway',
-    badge: '值守运行中',
-    lang: 'Go',
-  },
-];
-
-const moreLinks = [
-  { href: '/easy-suite/skills/', label: '技能广场', note: '自研 Agent 技能发布与安装' },
-  { href: '/easy-suite/', label: 'Easy Suite 官网', note: '产品官网与博客' },
-  { href: 'https://nightgopher.github.io/go-learning-for-java-dev/', label: 'Go 交互教学', note: '面向 Java 开发者' },
-  { href: 'https://github.com/nightgopher', label: 'GitHub ↗', note: '全部公开仓库' },
-];
+// 根路径统一跳转到 Easy Suite 官网（/easy-suite/），避免重复维护两套产品介绍；
+// 保留仓库本身以承载 GSC 验证文件、/skills/ 历史跳转与各子项目 Pages 路径。
 ---
-
-<Base
-  title="Hwj · 项目与实践"
-  description="Hwj 的个人 Agent 基础设施：EasyAgent（CLI/桌面/移动端 Agent 运行时）与 EasyGateway（统一 LLM 网关），可安装、值守运行中。技能广场与 Go 交互教学也在本站。"
->
-  <a class="skip-link" href="#content">跳到正文</a>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="返回顶部">
-      <span class="brand-mark" aria-hidden="true">H</span>
-      <span>Hwj · 项目与实践</span>
-    </a>
-    <nav aria-label="主导航">
-      <a href="/easy-suite/skills/">技能广场</a>
-      <a href="/easy-suite/">产品官网</a>
-      <a href="https://github.com/nightgopher" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
-  </header>
-
-  <main id="content">
-    <section class="hero" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Building in public</p>
-        <h1>把开发中的问题，<br><em>做成可复用的工具。</em></h1>
-        <p class="hero-lead">
-          我是 Hwj。两个可安装的核心项目构成我的全部主线：EasyAgent 与 EasyGateway，从多端入口、Agent 运行时、统一网关到经验沉淀，一条链路，值守运行中。
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://github.com/nightgopher/easyagent" target="_blank" rel="noopener">查看 EasyAgent</a>
-          <a class="button button-secondary" href="https://github.com/nightgopher/easygateway" target="_blank" rel="noopener">查看 EasyGateway</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="products-title">
-      <div class="section-heading">
-        <h2 id="products-title">两个核心项目</h2>
-        <p>可安装、在值守运行。完成以合并、部署与生产环境复测为准。</p>
-      </div>
-      <div class="project-grid">
-        {products.map((p) => (
-          <article class="project-card">
-            <h3>
-              <a href={p.url} target="_blank" rel="noopener">{p.name}</a>
-            </h3>
-            <p>{p.desc}</p>
-            <div class="project-meta">
-              <span class="meta-badge">{p.badge}</span>
-              <span>{p.lang}</span>
-            </div>
-            <a class="feature-link" href={p.url} target="_blank" rel="noopener">查看源码 ↗</a>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="section" aria-label="更多入口">
-      <div class="more-links">
-        {moreLinks.map((l) => (
-          <a href={l.href} target={l.href.startsWith('http') ? '_blank' : undefined} rel={l.href.startsWith('http') ? 'noopener' : undefined}>
-            <strong>{l.label}</strong>
-            <small>{l.note}</small>
-          </a>
-        ))}
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Hwj AI Infrastructure <span aria-hidden="true">·</span> Evidence before status.</p>
-  </footer>
-</Base>
-
-<style>
-  .more-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-  }
-  .more-links a {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    padding: 1.1rem 1.25rem;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: var(--card);
-    color: var(--text);
-    text-decoration: none;
-    transition: border-color 0.15s ease, background 0.15s ease;
-  }
-  .more-links a:hover {
-    border-color: var(--accent);
-    background: var(--card-hover);
-  }
-  .more-links small {
-    color: var(--text-muted);
-  }
-</style>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://nightgopher.github.io/easy-suite/" />
+    <meta http-equiv="refresh" content="0;url=/easy-suite/" />
+    <title>Easy Suite · 正在跳转</title>
+    <script>
+      window.location.replace('/easy-suite/');
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #0e1819;
+        color: #acbeb6;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 15px;
+      }
+      a { color: #34d399; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <p>正在前往 <a href="/easy-suite/">Easy Suite 官网</a>…</p>
+  </body>
+</html>
